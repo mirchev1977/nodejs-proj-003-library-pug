@@ -1,0 +1,9 @@
+title;author;issuedon
+Fundamentals of Wavelets;Goswami, Jaideva;22.12.2010
+Data Smart;Foreman,John;22.12.2011
+God Created the Integers;Hawking, Stephen;22.12.2012
+Superfreakonomics;Dubner,Stephen;22.12.2013
+Orientalism;Said Edward;22.12.2014
+Nature of Statistical Learning Theory The; Vapnik, Vladimir;22.12.2015
+Integration of the Indian States; Menon, V P;22.12.2016
+Drunkard's Walk, The;Mlodinow, Leonard;22.12.2017
