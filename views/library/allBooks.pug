@@ -1,2 +1,4 @@
-each book in books
-    h1=book.id + ' ' + book.title + ' ' + book.author + ' ' + book.issuedon
+extends ../layouts/main-layout
+block body
+    each book in books
+        h1=book.id + ' ' + book.title + ' ' + book.author + ' ' + book.issuedon
