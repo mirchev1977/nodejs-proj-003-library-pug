@@ -1,4 +1,9 @@
 extends ../layouts/main-layout
+block header
+    head
+        title Library with Pug - Home
+    h1 Header - Home
+
 block body
     each book in books
         h1=book.id + ' ' + book.title + ' ' + book.author + ' ' + book.issuedon
