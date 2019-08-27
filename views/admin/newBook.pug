@@ -1,0 +1,24 @@
+extends ../layouts/main-layout.pug
+
+block header__title
+    title Library with Pug - New Book
+
+block header__active-page
+    a( href="/")
+        li Home
+    a( href="/admin/new-book")
+        li( class="active" ) New Book
+
+block body
+    form( method="POST" action="/admin/new-book" id="new-book" )
+        div
+            label( for="book-title" ) Book Title
+            input( type="text" name="book-title" id="new-book__book-title" )
+        div
+            label( for="book-author" ) Book Author
+            input( type="text" name="book-author" id="new-book__book-author" )
+        div
+            label( for="book-issuedon" ) Book Issued On
+            input( type="text" name="book-issuedon" id="new-book__book-issuedon" )
+        div
+            button( type="submit" ) New Book

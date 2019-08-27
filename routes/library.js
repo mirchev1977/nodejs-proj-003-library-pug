@@ -3,7 +3,7 @@ const fs      = require( 'fs'      );
 
 const router = express.Router();
 
-router.get( '/', ( req, res, next )  => {
+router.get( '', ( req, res, next )  => {
     getAllBooks( './data/books.txt' ).then( booksArr => {
         const [ id, title, author, issuedon ] = booksArr.shift().split( ';' );
         const arrBooks = booksArr.map( bookLine => {

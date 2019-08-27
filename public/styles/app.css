@@ -1,8 +1,17 @@
+body {
+    background-color: yellow;
+}
+.main-menu li {
+    display:         inline-block;
+    list-style-type: none;
+    padding: 10px 20px;
+}
 
 table.all-books {
     border: 1px solid black;
     border-collapse: collapse;
 }
+
 .all-books th, .all-books td {
     border: 1px solid black; 
     padding: 10px 20px;
