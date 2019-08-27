@@ -2,15 +2,7 @@ extends ../layouts/main-layout
 block header
     head
         title Library with Pug - Home
-        style(type="text/css").
-            table.all-books {
-                border: 1px solid black;
-                border-collapse: collapse;
-            }
-            .all-books th, .all-books td {
-                border: 1px solid black; 
-                padding: 10px 20px;
-            }
+        link(rel="stylesheet" href="styles/app.css" type="text/css")
     h1 Header - Home
 
 block body
