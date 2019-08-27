@@ -1,12 +1,12 @@
 const path    = require( 'path'    );
 const express = require( 'express' );
+const rootDir = require( './utils/rootdir' );
 
 const libraryRoutes = require( './routes/library' );
 const adminRoutes   = require( './routes/admin'   );
 
 const app = express();
 
-const rootDir = path.dirname( process.mainModule.filename );
 app.use( express.static( path.join( rootDir, 'public' ) ) );
 
 app.set( 'view engine', 'pug' );
