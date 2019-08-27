@@ -23,7 +23,9 @@ router.get( '/', ( req, res, next )  => {
             if ( book ) return book;
         } );
 
-        res.render( 'library/allBooks', { books: arrBooksFiltered } ); 
+        res.render( 'library/allBooks', { books: arrBooksFiltered, bookHeaders: {
+            id, title, author, issuedon
+        } } ); 
     }, err => {
         debugger;
     } );

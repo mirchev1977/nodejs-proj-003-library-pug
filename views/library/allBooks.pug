@@ -2,8 +2,27 @@ extends ../layouts/main-layout
 block header
     head
         title Library with Pug - Home
+        style(type="text/css").
+            table.all-books {
+                border: 1px solid black;
+                border-collapse: collapse;
+            }
+            .all-books th, .all-books td {
+                border: 1px solid black; 
+                padding: 10px 20px;
+            }
     h1 Header - Home
 
 block body
-    each book in books
-        h1=book.id + ' ' + book.title + ' ' + book.author + ' ' + book.issuedon
+    table.all-books
+        tr
+            th=bookHeaders.id
+            th=bookHeaders.title
+            th=bookHeaders.author
+            th=bookHeaders.issuedon
+        each book in books
+            tr
+                td=book.id
+                td=book.title
+                td=book.author
+                td=book.issuedon
