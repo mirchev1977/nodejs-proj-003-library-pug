@@ -4,6 +4,10 @@
     padding: 10px 20px;
 }
 
+.main-menu .active {
+    background-color: yellow;
+}
+
 table.all-books {
     border: 1px solid black;
     border-collapse: collapse;
