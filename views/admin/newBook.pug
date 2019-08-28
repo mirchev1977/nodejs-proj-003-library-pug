@@ -10,15 +10,15 @@ block header__active-page
         li( class="active" ) New Book
 
 block body
-    form( method="POST" action="/admin/new-book" id="new-book" )
-        div
+    form( method="POST" action="/admin/new-book" id="new-book" class="new-book" )
+        div( class="new-book__row" )
             label( for="book-title" ) Book Title
             input( type="text" name="book-title" id="new-book__book-title" )
-        div
+        div( class="new-book__row" )
             label( for="book-author" ) Book Author
             input( type="text" name="book-author" id="new-book__book-author" )
-        div
+        div( class="new-book__row" )
             label( for="book-issuedon" ) Book Issued On
             input( type="text" name="book-issuedon" id="new-book__book-issuedon" )
-        div
+        div( class="new-book__row new-book__row__button" )
             button( type="submit" ) New Book

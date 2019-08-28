@@ -17,3 +17,35 @@ table.all-books {
     border: 1px solid black; 
     padding: 10px 20px;
 }
+
+form.new-book {
+    width: 500px;
+}
+
+.main-menu ul {
+    padding:  0px;
+}
+
+.new-book__row {
+    padding: 10px 20px;
+}
+
+.new-book__row label {
+    width: 120px;
+    display: inline-block;
+}
+
+.new-book__row input {
+    height: 35px;
+    width: 300px;
+}
+
+.new-book__row__button {
+    text-align: right;
+}
+
+.new-book__row button {
+    width:  40%;
+    height: 35px;
+    margin-right: 40px;
+}
