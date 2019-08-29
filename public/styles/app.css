@@ -49,3 +49,10 @@ form.new-book {
     height: 35px;
     margin-right: 40px;
 }
+
+.error-message {
+    text-align: center;
+    color: red;
+    font-weight: bold;
+    padding: 30px;
+}

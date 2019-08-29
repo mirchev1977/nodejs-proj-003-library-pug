@@ -2,8 +2,9 @@ block header
     head
         block header__title
             title Library with Pug
-        link(rel="stylesheet" href="/styles/app.css" type="text/css")
-    h1 Header
+        block header__static
+            link(rel="stylesheet" href="/styles/app.css" type="text/css")
+    h1 Welcome to our Library
     div.main-menu
         ul
             block header__active-page
@@ -11,5 +12,6 @@ block header
                     li( class="active" ) Home
                 a( href="/admin/new-book")
                     li New Book
+    div.error-message#error-message
 block body
 h1 Footer

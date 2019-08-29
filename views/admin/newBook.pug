@@ -12,13 +12,20 @@ block header__active-page
 block body
     form( method="POST" action="/admin/new-book" id="new-book" class="new-book" )
         div( class="new-book__row" )
-            label( for="book-title" ) Book Title
+            label( for="new-book__book-title" ) Book Title
             input( type="text" name="book-title" id="new-book__book-title" )
         div( class="new-book__row" )
-            label( for="book-author" ) Book Author
+            label( for="new-book__book-author" ) Book Author
             input( type="text" name="book-author" id="new-book__book-author" )
         div( class="new-book__row" )
-            label( for="book-issuedon" ) Book Issued On
-            input( type="text" name="book-issuedon" id="new-book__book-issuedon" )
+            label( for="new-book__book-issuedon" ) Book Issued On
+            input( 
+                    type="text" 
+                    name="book-issuedon" 
+                    id="new-book__book-issuedon" 
+                    placeholder="dd.mm.yyyy" 
+                )
         div( class="new-book__row new-book__row__button" )
             button( type="submit" ) New Book
+    
+    script( src="/scripts/new-book.js" )
