@@ -6,7 +6,7 @@ function keepAlive () {
         http.get( 'http://localhost:3000', resp => {
             //console.log( resp );
         } );
-    }, 20000 );
+    }, 20 * 60 * 1000 );
 }
 
 module.exports = keepAlive;
