@@ -57,3 +57,10 @@ form.new-book {
     padding: 30px;
     display: none;
 }
+.main-menu li {
+    border: 1px solid black;
+}
+
+.main-menu a > li {
+    margin-right: 5px;
+}
