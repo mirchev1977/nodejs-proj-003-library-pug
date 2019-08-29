@@ -16,8 +16,8 @@ app.set( 'view engine', 'pug' );
 app.set( 'views', 'views' );
 
 
-app.use( '/', libraryRoutes    );
-app.use( '/admin', adminRoutes );
+app.use( '/',      libraryRoutes );
+app.use( '/admin', adminRoutes   );
 
 app.use( ( req, res, next ) => {
     res.render( '404' );
