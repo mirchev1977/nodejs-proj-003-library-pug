@@ -7,6 +7,8 @@ router.get( '/new-book', ( req, res, next ) => {
 } );
 
 router.post( '/new-book', ( req, res, next ) => {
+    console.log( req.body );
+    debugger;
     res.redirect( '/' );
 } );
 
