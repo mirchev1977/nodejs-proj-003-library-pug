@@ -1,5 +1,6 @@
 const path        = require( 'path'                  );
 const express     = require( 'express'               );
+const bodyParser  = require( 'body-parser'           );
 const rootDir     = require( './utils/rootdir'       );
 const fileRewrite = require( './utils/fileRewrite'   );
 const keepAlive   = require( './utils/keepAlive'     );
@@ -12,6 +13,7 @@ keepAlive();
 
 const app = express();
 
+app.use( bodyParser.urlencoded( { extended: false } ) );
 app.use( express.static( path.join( rootDir, 'public' ) ) );
 
 app.set( 'view engine', 'pug' );

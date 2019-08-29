@@ -1,5 +1,7 @@
 const express = require( 'express' );
 
+const library = require( '../utils/library' );
+
 const router = express.Router();
 
 router.get( '/new-book', ( req, res, next ) => {
@@ -7,8 +9,7 @@ router.get( '/new-book', ( req, res, next ) => {
 } );
 
 router.post( '/new-book', ( req, res, next ) => {
-    console.log( req.body );
-    debugger;
+    library.newBook( req.body );
     res.redirect( '/' );
 } );
 

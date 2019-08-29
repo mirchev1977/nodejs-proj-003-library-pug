@@ -47,6 +47,38 @@ function getAllBooks ( path ) {
     return promise;
 }
 
+function newBook ( book ) {
+    let lastIdStr = '';
+    fs.readFile( './data/lastId.txt', ( err, data ) => {
+        if ( err ) {
+            console.log( err );
+        }
+        lastIdStr += data;
+        let lastId = ( lastIdStr * 1 ) + 1;
+        const arrBook = [ 
+            lastId, 
+            book[ 'book-title'    ],
+            book[ 'book-author'   ],
+            book[ 'book-issuedon' ]
+        ];
+
+        let bookLine = arrBook.join( ';' ) + "\n";
+
+        fs.appendFile( './data/books.txt', bookLine, ( err ) => {
+            if ( err ) {
+                console.log( err );
+            }
+
+            fs.writeFile( './data/lastId.txt', lastId, ( err ) => {
+                if ( err ) {
+                    console.log( err );
+                }
+            } );
+        } );
+    } );
+}
+
 module.exports = {
-    fetchAllBooks: fetchAllBooks
+    fetchAllBooks: fetchAllBooks,
+    newBook:       newBook
 };
