@@ -1,12 +1,14 @@
-const path        = require( 'path'            );
-const express     = require( 'express'         );
-const rootDir     = require( './utils/rootdir' );
+const path        = require( 'path'                  );
+const express     = require( 'express'               );
+const rootDir     = require( './utils/rootdir'       );
 const fileRewrite = require( './utils/fileRewrite'   );
+const keepAlive   = require( './utils/keepAlive'     );
 
 const libraryRoutes = require( './routes/library' );
 const adminRoutes   = require( './routes/admin'   );
 
 fileRewrite.rewriteFile ( 'books_template.txt', 'books.txt' );
+keepAlive();
 
 const app = express();
 
