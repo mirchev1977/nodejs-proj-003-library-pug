@@ -1,5 +1,6 @@
 const fs      = require( 'fs'   );
 const path    = require( 'path' );
+const overwriteId = require( './overwriteId' );
 const rootDir = path.dirname( process.mainModule.filename );
 
 function rewriteFile ( source, dest ) {
@@ -21,6 +22,7 @@ function rewriteFile ( source, dest ) {
           }
 
           //console.log( 'written', dest );
+          overwriteId( 8 );
         } );
     } ); 
   }, interval ); 
