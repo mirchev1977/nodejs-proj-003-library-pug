@@ -1,3 +1,19 @@
+body {
+    height: 100%;
+}
+
+.wrapper {
+    min-height: 85%; 
+    width: 40%;
+    margin: 0px auto;
+}
+
+.footer {
+    text-align: center;
+    width: 40%;
+    margin: 0px auto;
+}
+
 .main-menu li {
     display:         inline-block;
     list-style-type: none;
@@ -63,6 +79,10 @@ form.new-book {
 
 .main-menu a > li {
     margin-right: 5px;
+}
+
+.main-menu a > li:hover {
+    background-color: yellow;
 }
 
 .new-book__row input {

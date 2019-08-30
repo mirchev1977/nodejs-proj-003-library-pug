@@ -4,14 +4,17 @@ block header
             title Library with Pug
         block header__static
             link(rel="stylesheet" href="/styles/app.css" type="text/css")
-    h1 Welcome to our Library
-    div.main-menu
-        ul
-            block header__active-page
-                a( href="/")
-                    li( class="active" ) Home
-                a( href="/admin/new-book")
-                    li New Book
-    div.error-message#error-message
-block body
-h1 Footer
+    body
+        .wrapper
+            h1 Welcome to our Library
+            div.main-menu
+                ul
+                    block header__active-page
+                        a( href="/")
+                            li( class="active" ) Home
+                        a( href="/admin/new-book")
+                            li New Book
+            div.error-message#error-message
+            block body
+        .footer
+            h1 Footer
