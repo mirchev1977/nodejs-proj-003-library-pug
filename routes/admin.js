@@ -20,4 +20,13 @@ router.get( '/delete', ( req, res, next ) => {
     res.redirect( '/' );
 } );
 
+router.get( '/edit', ( req, res, next ) => {
+    res.render( 'admin/editBook', { book: req.query } );
+} );
+
+router.post( '/edit', ( req, res, next ) => {
+    utilAdmin.editBook( req.body );
+    res.redirect( '/' );
+} );
+
 module.exports = router;

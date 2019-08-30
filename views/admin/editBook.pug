@@ -1,0 +1,43 @@
+extends ../layouts/main-layout.pug
+
+block header__title
+    title Library with Pug - New Book
+
+block header__active-page
+    a( href="/")
+        li Home
+    a( href="#")
+        li( class="active" ) Edit Book
+
+block body
+    form( method="POST" action="/admin/edit" id="new-book" class="new-book" )
+        input( type="hidden" name="book-id" id="new-book__book-id" value=`${book.id}` )
+        div( class="new-book__row" )
+            label( for="new-book__book-title" ) Book Title
+            input( 
+                type="text" 
+                name="book-title" 
+                id="new-book__book-title" 
+                value=`${book.title}` 
+            )
+        div( class="new-book__row" )
+            label( for="new-book__book-author" ) Book Author
+            input( 
+                type="text" 
+                name="book-author" 
+                id="new-book__book-author" 
+                value=`${book.author}`
+            )
+        div( class="new-book__row" )
+            label( for="new-book__book-issuedon" ) Book Issued On
+            input( 
+                    type="text" 
+                    name="book-issuedon" 
+                    id="new-book__book-issuedon" 
+                    placeholder="dd.mm.yyyy" 
+                    value=`${book.issuedon}`
+                )
+        div( class="new-book__row new-book__row__button" )
+            button( type="submit" ) Save Changes
+    
+    script( src="/scripts/new-book.js" )

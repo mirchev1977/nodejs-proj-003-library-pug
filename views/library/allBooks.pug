@@ -19,6 +19,7 @@ block body
                     href="?sort=issuedon" 
                 )=bookHeaders.issuedon.toUpperCase()
             th Delete
+            th Edit
         each book in books
             tr
                 td=book.title
@@ -26,4 +27,9 @@ block body
                 td=book.issuedon
                 td
                     a( href=`/admin/delete?id=${book.id}` class="delete-book" ) Delete
+                td
+                    a( 
+                        href=`/admin/edit?id=${book.id}&title=${book.title}&author=${book.author}&issuedon=${book.issuedon}`
+                        class="edit-book" 
+                    ) Edit
     script( src="/scripts/all-books.js" )
