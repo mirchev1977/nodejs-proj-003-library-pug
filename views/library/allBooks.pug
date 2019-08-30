@@ -25,4 +25,5 @@ block body
                 td=book.author
                 td=book.issuedon
                 td
-                    a( href=`/admin/delete?id=${book.id}` ) Delete
+                    a( href=`/admin/delete?id=${book.id}` class="delete-book" ) Delete
+    script( src="/scripts/all-books.js" )
