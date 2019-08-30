@@ -17,4 +17,10 @@ block header
             div.error-message#error-message
             block body
         .footer
-            h1 Footer
+            div © Our Library 
+                span#footer-full-year
+                span 
+                span Всички права запазени. 
+                script.
+                    var fullYear = document.getElementById( 'footer-full-year' )
+                    fullYear.innerText = new Date().getFullYear()
