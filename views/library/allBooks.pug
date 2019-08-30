@@ -6,9 +6,18 @@ block header__title
 block body
     table.all-books
         tr
-            th=bookHeaders.title
-            th=bookHeaders.author
-            th=bookHeaders.issuedon
+            th
+                a( 
+                    href="?sort=title" 
+                )=bookHeaders.title.toUpperCase()
+            th
+                a( 
+                    href="?sort=author" 
+                )=bookHeaders.author.toUpperCase()
+            th
+                a( 
+                    href="?sort=issuedon" 
+                )=bookHeaders.issuedon.toUpperCase()
         each book in books
             tr
                 td=book.title

@@ -1,6 +1,6 @@
 const fs      = require( 'fs'      );
 
-function fetchAllBooks ( src ) {
+function fetchAllBooks ( src, opt ) {
     const promise = new Promise( ( resolve, reject ) => {
         getAllBooks( src ).then( booksArr => {
             const [ id, title, author, issuedon ] = booksArr.shift().split( ';' );
@@ -20,6 +20,22 @@ function fetchAllBooks ( src ) {
             const arrBooksFiltered = arrBooks.filter( book => {
                 if ( book ) return book;
             } );
+
+            if ( opt[ 'sort' ] && opt[ 'sort' ] === 'title'  ) {
+                arrBooksFiltered.sort( ( a, b ) => {
+                    return a.title.toLowerCase().localeCompare( b.title.toLowerCase() );
+                } );
+
+            } else if ( opt[ 'sort' ] && opt[ 'sort' ] === 'author'  ) {
+                arrBooksFiltered.sort( ( a, b ) => {
+                    return a.author.toLowerCase().localeCompare( b.author.toLowerCase() );
+                } ); 
+            } else if ( opt[ 'sort' ] && opt[ 'sort' ] === 'issuedon'  ) {
+                arrBooksFiltered.sort( ( a, b ) => {
+                    return a.issuedon.toLowerCase().localeCompare( b.issuedon.toLowerCase() );
+                } );
+            }
+
 
             resolve( { books: arrBooksFiltered, bookHeaders: {
                 id, title, author, issuedon 
