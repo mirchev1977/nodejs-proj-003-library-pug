@@ -9,3 +9,12 @@ id;title;author;issuedon
 8;Drunkard's Walk, The;Mlodinow, Leonard;22.12.2017
 9;Book A;Author A;30.08.2019
 10;one;two;22.12.2019
+11;Book B;Author B;30.08.2018
+12;Book Three;Author Three;31.08.2019
+13;Book Four;Author Four;31.08.2019
+14;Book Five;Author Five;31.08.2019
+15;Book Six;Author Six;31.08.2019
+16;one;two;31.08.2019
+17;Book Seven;Author Seven;31.08.2019
+18;Book Eight;Author Eight;28.08.2019
+19;Book Nine;Author Nine;30.08.2019

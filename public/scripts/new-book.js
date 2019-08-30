@@ -25,4 +25,13 @@ submitButton.addEventListener( 'submit', ( ev ) => {
         errorMessage.innerText = 'Invalid date!';
         return false;
     }
+    const [ bookDD, bookMM, bookYYYY ] = newBookIssuedOn.split( /\s*\.\s*/ );
+
+    const dtNow  = new Date(                                   ).getTime();
+    const dtBook = new Date( `${bookYYYY}-${bookMM}-${bookDD}` ).getTime();
+    if ( dtBook > dtNow ) {
+        ev.preventDefault();
+        errorMessage.innerText = 'Book Issue Date Cannot Be Bigger than Now!';
+        return false; 
+    }
 } );
